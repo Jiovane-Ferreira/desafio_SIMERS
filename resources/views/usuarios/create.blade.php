@@ -2,34 +2,37 @@
 
 @section('content')
 
-<!-- Página de criação do usuário  -->
- 
+    
+
+    <div class="form-container">
+
     <h1>Novo Usuário</h1>
 
-    <form action="{{ route('usuarios.store') }}" method="POST">
-        @csrf <!-- Adiciona um Token CSRF -->
+        <form action="{{ route('usuarios.store') }}" method="POST">
+            @csrf <!-- Adiciona um Token CSRF -->
 
-        <label>Nome:</label><br>
-        <input type="text" name="nome" required><br><br>
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
 
-        <label>CPF:</label><br>
-        <input type="text" name="cpf" required><br><br>
+            <label>CPF:</label>
+            <input type="text" name="cpf" required>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-        <label>Data de Nascimento:</label><br>
-        <input type="date" name="data_nascimento" required><br><br>
+            <label>Data de Nascimento:</label>
+            <input type="date" name="data_nascimento" required>
 
-        <label>Telefone:</label><br>
-        <input type="text" name="telefone" required><br><br>
+            <label>Telefone:</label>
+            <input type="text" name="telefone" required>
 
-        <label>Senha:</label><br>
-        <input type="password" name="senha" required><br><br>
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
 
-        <button type="submit">Cadastrar</button>
-    </form>
+            <button type="submit" class="btn btn-edit">Cadastrar</button>
+        </form>
 
-    <br>
-    <a href="{{ route('usuarios.index') }}">Voltar à Lista</a>
+        
+        <a href="{{ route('usuarios.index') }}" class="btn btn-return">Voltar à Lista</a>
+    </div>
 @endsection

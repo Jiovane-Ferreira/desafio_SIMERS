@@ -2,32 +2,34 @@
 
 @section('content')
 
-<!-- Página de edição do usuário  -->
+    
+    <div class="form-container">
 
     <h1>Editar Usuário</h1>
 
-    <form action="{{ route('usuarios.update', $usuario->id) }}" method="POST">
-        @csrf
-        @method('PUT') 
+        <form action="{{ route('usuarios.update', $usuario->id) }}" method="POST">
+            @csrf
+            @method('PUT') 
 
-        <label>Nome:</label><br>
-        <input type="text" name="nome" value="{{ $usuario->nome }}" required><br><br>
+            <label>Nome:</label>
+            <input type="text" name="nome" value="{{ $usuario->nome }}" required>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" value="{{ $usuario->email }}" required><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" value="{{ $usuario->email }}" required>
 
-        <label>Data de Nascimento:</label><br>
-        <input type="date" name="data_nascimento" value="{{ $usuario->data_nascimento }}" required><br><br>
+            <label>Data de Nascimento:</label>
+            <input type="date" name="data_nascimento" value="{{ $usuario->data_nascimento }}" required>
 
-        <label>Telefone:</label><br>
-        <input type="text" name="telefone" value="{{ $usuario->telefone }}" required><br><br>
+            <label>Telefone:</label>
+            <input type="text" name="telefone" value="{{ $usuario->telefone }}" required>
 
-        <label>Senha (deixe em branco para manter a atual):</label><br>
-        <input type="password" name="senha"><br><br>
+            <label>Senha (deixe em branco para manter a atual):</label>
+            <input type="password" name="senha">
 
-        <button type="submit">Salvar Alterações</button>
-    </form>
+            <button type="submit" class="btn btn-edit">Salvar Alterações</button>
+        </form>
 
-    <br>
-    <a href="{{ route('usuarios.index') }}">Voltar à Lista</a>
+        
+        <a href="{{ route('usuarios.index') }}" class="btn btn-return">Voltar à Lista</a>
+    </div>
 @endsection

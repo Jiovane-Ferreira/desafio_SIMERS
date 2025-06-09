@@ -21,7 +21,7 @@
         </div>
     </header>
 
-    <main class="main container">
+    <main class="main-container">
         @yield('content')
     </main>
 

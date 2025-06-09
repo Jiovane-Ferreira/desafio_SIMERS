@@ -1,6 +1,46 @@
-body {
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 1rem;
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav-link {
+    background-color: #008B71;
+    padding: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    flex: 1;
+    margin-top: 80px;
 }
 
 h1 {
@@ -14,28 +54,110 @@ a {
 }
 
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
+    margin: 3rem auto;
+
 }
 
-th, td {
+th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+
+td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
+}
+
+td:last-child {
+    text-align: center;
 }
 
 th {
     background-color: #f4f4f4;
 }
 
-button {
-    background-color: red;
+.btn {
+    background-color: #ccc;
     color: white;
     border: none;
-    padding: 5px 10px;
+    border-radius: 5px;
+    padding: 6px 12px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.btn-edit {
+    background-color: #008B71;
+}
+
+.btn-edit:hover {
+    background-color: #006f5a;
+}
+
+.btn-delete {
+    background-color: red;
+}
+
+.btn-return {
+    color:#333;
+}
+
+.btn-delete:hover {
     background-color: darkred;
+}
+
+.form-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.form-container form {
+    display: flex;  
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container .btn {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #008B71;
+    text-align: center;
+    padding: 1rem;
+    color: #FFF;
+    font-size: 1.1em;
 }
