@@ -20,7 +20,7 @@
                     <td>{{ $usuario->nome }}</td>
                     <td>{{ $usuario->cpf }}</td>
                     <td>{{ $usuario->email }}</td>
-                    <td>{{ $usuario->data_nascimento }}</td>
+                    <td>{{ $usuario->dataNascimentoFormat() }}</td>
                     <td>{{ $usuario->telefone }}</td>
                     <td>
                         <a class="btn btn-edit" href="{{ route('usuarios.edit', $usuario->id) }}">Editar</a>
